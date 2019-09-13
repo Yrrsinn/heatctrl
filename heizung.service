@@ -1,0 +1,16 @@
+[Unit]
+Description=the eq3 heating control
+
+[Service]
+User=afra
+Group=afra
+
+Type=simple
+ExecStart=/home/afra/heizung/heizung.py
+WorkingDirectory=/home/afra/heizung
+
+KillMode=process
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
